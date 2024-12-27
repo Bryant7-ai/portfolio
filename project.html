@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Bootstrap_files/css/bootstrap.min.css" />
+    <script src="Bootstrap_files/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="icons/all.min.css" />
+    <link rel="stylesheet" href="icons/fontawesome.min.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <title>Portfolio | Project</title>
+    <style>
+      /* Basic Card Style */
+      .card {
+        border-radius: 10px;
+        transition: box-shadow 0.3s ease;
+        overflow: hidden; /* Hide overflowing content */
+        position: relative;
+      }
+
+      /* Image at the top */
+      .card .images {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        transition: opacity 0.5s ease; /* Fade effect for image */
+      }
+
+      /* Text inside the card */
+      .card-text {
+        position: absolute;
+        left: -100%; /* Initially position the text off-screen */
+        top: 50%;
+        transform: translateY(-75%); /* Center the text vertically */
+        transition: transform 0.5s ease, left 0.5s ease; /* Transition for sliding effect */
+        padding: 10px;
+        border-radius: 5px;
+        letter-spacing: 3px;
+        width: calc(100% - 40px); /* Adjust text width */
+      }
+
+      /* Hover effect - hide the image and slide in text */
+      .card:hover .images {
+        opacity: 0; /* Fade out the image */
+      }
+
+      .card:hover .card-text {
+        left: 20px; /* Slide the text in from the left */
+        transform: translateY(-75%);
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Header-->
+    <header class="sticky-top">
+      <div class="container-fluid" style="background-color: #28282b">
+        <nav class="navbar navbar-expand-lg navbar-light" id="bar">
+          <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand text-light fw-semibold fs-3" href="#"
+              ><span class="fs-2">B</span><span class="fs-1">D</span
+              ><span class="fs-2">Q</span></a
+            >
+            <!-- Toggler for mobile view -->
+            <button
+              class="navbar-toggler border border-light"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span><i class="fa-solid fa-bars text-light"></i></span>
+            </button>
+            <!-- Menu items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto" style="letter-spacing: 1px">
+                <li class="nav-item">
+                  <a class="nav-link text-light me-2" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light me-2" href="about.html"
+                    >About</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light me-2 active" href="project.html"
+                    >Project</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light me-2" href="#">Services</a>
+                </li>
+                <li class="nav-item me-2">
+                  <a class="nav-link text-light me-2" href="contact.html"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+              <div class="me-2 logo">
+                <i class="fa-brands fa-linkedin fa-lg text-light"></i>
+              </div>
+              <div class="me-2 logo">
+                <i class="fa-brands fa-instagram fa-lg text-light"></i>
+              </div>
+              <div class="me-2 logo">
+                <i class="fa-brands fa-github fa-lg text-light"></i>
+              </div>
+              <div class="me-2 logo">
+                <i class="fa-brands fa-twitter fa-lg text-light"></i>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!--Main Content-->
+    <div class="container-fluid bg-dark">
+      <div class="container">
+        <div class="row justify-content-center">
+          <label for="" class="text-center mt-5 text-light fw-lighter"
+            >Browse my Recent</label
+          >
+          <label for="" class="text-center fs-1 fw-bolder main-color mb-5"
+            >Projects</label
+          >
+          <div class="row justify-content-center">
+            <div class="col-md-4 mb-4">
+              <div
+                class="card bg-dark text-light border border-secondary border-3"
+              >
+                <img
+                  src="IMG/p_1.png"
+                  alt="Image"
+                  style="height: auto; width: auto"
+                  class="images"
+                />
+                <div class="card-text mb-1">
+                  E-voting is an electronic method of voting that allows
+                  individuals to cast votes via digital platforms, enhancing
+                  convenience, accessibility, and security in elections while
+                  reducing costs and administrative effort.
+                  <br />
+                  <br />
+                  <label for="" class="text-center main-color fw-bold fs-5"
+                    >VB.NET</label
+                  >
+                </div>
+                <div class="card-title p-3">
+                  <label for="" class="fw-bold"
+                    >E-VOTING MANAGEMENT SYSTEM</label
+                  >
+                </div>
+                <div class="mb-4 text-center">
+                  <button
+                    type="submit"
+                    class="btn fw-bold py-2 px-4 rounded-5 border border-secondary text-light me-3"
+                  >
+                    Live Demo
+                  </button>
+                  <button
+                    type="submit"
+                    class="btn fw-bold py-2 px-4 rounded-5 border border-secondary text-light me-3"
+                  >
+                    GitHub
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div
+                class="card bg-dark text-light border border-secondary border-3"
+              >
+                <img
+                  src="img/p_2.png"
+                  alt="Image"
+                  style="height: auto; width: auto"
+                  class="images"
+                />
+                <div class="card-text">
+                  Bryfaye Cycles webpage combines simple HTML, attractive CSS
+                  and engaging features. It showcases bikes, encourages green
+                  transportation and provides easy navigation for a
+                  user-friendly experience.
+                  <br />
+                  <br />
+                  <label for="" class="text-center main-color fw-bold fs-5"
+                    >HTML, CSS</label
+                  >
+                </div>
+                <div class="card-title p-3">
+                  <label for="" class="fw-bold">BRYFAYE CYCLES WEBPAGE</label>
+                </div>
+                <div class="mb-4 text-center">
+                  <button
+                    type="button"
+                    class="btn fw-bold py-2 px-4 rounded-5 border border-secondary text-light me-3"
+                    data-bs-toggle="modal"
+                    data-bs-target="#bike_modal"
+                  >
+                    Live Demo
+                  </button>
+                  <a
+                    href="https://github.com/MrBDQ/BFC-BIKE-SHOP"
+                    class="btn fw-bold py-2 px-4 rounded-5 border border-secondary text-light me-3"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div
+                class="card bg-dark text-light border border-secondary border-3"
+              >
+                <img
+                  src="img/p_3.png"
+                  alt="Image"
+                  style="height: auto; width: auto"
+                  class="images"
+                />
+                <div class="card-text">
+                  PTB Bank: A basic online banking system in PHP, enabling users
+                  to create accounts, deposit, withdraw, reports of funds and
+                  check balances securely."
+                  <br />
+                  <br />
+                  <label for="" class="text-center main-color fw-bold fs-5"
+                    >HTML, BOOTSTRAP, PHP</label
+                  >
+                </div>
+                <div class="card-title p-3">
+                  <label for="" class="fw-bold">PT BANK SYSTEM</label>
+                </div>
+                <div class="mb-4 text-center">
+                  <button
+                    type="button"
+                    class="btn fw-bold py-2 px-4 rounded-5 border border-secondary text-light me-3"
+                    data-bs-toggle="modal"
+                    data-bs-target="#bank_modal"
+                  >
+                    Live Demo
+                  </button>
+                  <button
+                    type="submit"
+                    class="btn fw-bold py-2 px-4 rounded-5 border border-secondary text-light me-3"
+                  >
+                    GitHub
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5 line">
+          <div class="col-md-2">
+            <hr
+              class="text-warning border-5 rounded-5"
+              style="box-shadow: 0 4px 12px rgba(247, 192, 138, 0.5)"
+            />
+          </div>
+          <div class="col-md-2">
+            <hr
+              class="text-warning border-5 rounded-5"
+              style="box-shadow: 0 4px 12px rgba(247, 192, 138, 0.5)"
+            />
+          </div>
+          <div class="col-md-1">
+            <hr
+              class="text-warning border-5 rounded-5"
+              style="box-shadow: 0 4px 12px rgba(247, 192, 138, 0.5)"
+            />
+          </div>
+          <div class="col-md-1">
+            <hr
+              class="text-warning border-5 rounded-5"
+              style="box-shadow: 0 4px 12px rgba(247, 192, 138, 0.5)"
+            />
+          </div>
+          <div class="col-md-1">
+            <hr
+              class="text-warning border-5 rounded-5"
+              style="box-shadow: 0 4px 12px rgba(247, 192, 138, 0.5)"
+            />
+          </div>
+          <div class="col-md-1">
+            <hr
+              class="text-warning border-5 rounded-5"
+              style="box-shadow: 0 4px 12px rgba(247, 192, 138, 0.5)"
+            />
+          </div>
+          <div class="col-md-2">
+            <hr
+              class="text-warning border-5 rounded-5"
+              style="box-shadow: 0 4px 12px rgba(247, 192, 138, 0.5)"
+            />
+          </div>
+          <div class="col-md-2">
+            <hr
+              class="text-warning border-5 rounded-5"
+              style="box-shadow: 0 4px 12px rgba(247, 192, 138, 0.5)"
+            />
+          </div>
+        </div>
+        <div class="mt-3 text-center">
+          <label for="" class="text-center mt-5 text-light fw-lighter"
+            >My Recent Client</label
+          >
+        </div>
+        <div class="text-center">
+          <label for="" class="fs-1 fw-bolder main-color mb-5">Feedback</label>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6 mb-5">
+            <div class="card bg-light p-4 rounded-5">
+              <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-10">
+                  <p
+                    class="text-dark fw-light fs-5"
+                    style="text-align: justify"
+                  >
+                    Covering fundamental IT support skills, this certification
+                    includes troubleshooting, system administration, networking,
+                    security, and customer service. Ideal for those entering the
+                    IT support field.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5">
+            <div class="card bg-light p-4 rounded-5">
+              <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-10">
+                  <p class="text-dark fw-light fs-5">
+                    Covering fundamental IT support skills, this certification
+                    includes troubleshooting, system administration, networking,
+                    security, and customer service. Ideal for those entering the
+                    IT support field.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center"></div>
+      </div>
+    </div>
+    <!--Footer-->
+    <div class="container-fluid" style="background-color: #28282b">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-12 mt-3">
+            <hr class="rounded-4" style="border: 2px solid white" />
+          </div>
+        </div>
+        <div class="row">
+          <label for="" class="text-light fw-bold mb-3"
+            >&copy; 2024 Portfolio - Bryan Quilang</label
+          >
+        </div>
+      </div>
+      <!-- Modal Bike -->
+      <div class="modal fade" id="bank_modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title fw-bold">BryFaye Cycles Live Demo</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <iframe
+                width="100%"
+                height="500"
+                src="VID/bank.mp4"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Bike -->
+      <div class="modal fade" id="bike_modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title fw-bold">BryFaye Cycles Live Demo</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <iframe
+                width="100%"
+                height="500"
+                src="VID/bike.mp4"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
